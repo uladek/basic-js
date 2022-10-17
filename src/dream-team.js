@@ -15,10 +15,10 @@ const { NotImplementedError } = require('../extensions/index.js');
  */
 function createDreamTeam(members) {
 // Array.isArray(members);
-// if(!(Array.isArray(members))) {
-//   return false;
-// })
-if(!(Array.isArray(members)) return false;
+if(!(Array.isArray(members))) {
+  return false;
+}
+// if(!(Array.isArray(members)) return false;
 
 
   let result =[];
