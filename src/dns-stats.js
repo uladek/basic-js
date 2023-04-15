@@ -22,10 +22,56 @@ const { NotImplementedError } = require('../extensions/index.js');
  * }
  *
  */
-function getDNSStats(/* domains */) {
-  throw new NotImplementedError('Not implemented');
+function getDNSStats(domains) {
+  // throw new NotImplementedError('Not implemented');
   // remove line with error and write your code here
+  let keys = []
+  //массив ключей в будущем объекте
+let values = []
+  //массив значений 
+  
+  for(let i of domains){
+      
+      let key = `.${i.toString().split('.').reverse().join('.')}`;
+      let key1 = `.${i.toString().split('.').reverse().slice(0,1)}`;
+  
+    keys.push(key)
+
+      if(!keys.includes(key1)){
+ keys.unshift(key1)
+      }
+  }
+
+     let strArr= keys.slice(1)
+let str = strArr.join('').toString()
+
+for(let k of keys){
+  console.log(k)
+  
+  if(str.includes(k)) {
+     // var type = 1;
+let regex = new RegExp(k,'g')
+          console.log(str.match(regex).length) 
+      values.push(str.match(regex).length) 
 }
+}
+
+  // console.log(keys)
+  //  console.log(values)
+  let object = {};
+
+for (let i = 0; i < keys.length; i++) {
+let key = keys[i];
+let value = values[i];
+
+object[key] = value;
+}
+
+return object;
+
+
+}
+// (/* domains */)
 
 module.exports = {
   getDNSStats
