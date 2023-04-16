@@ -15,7 +15,7 @@ function encodeLine(str) {
   // remove line with error and write your code here
 
   let res = []
-    // let temp = []
+    
    let count = 1
     for(let k of str){
  

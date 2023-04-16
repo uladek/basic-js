@@ -51,11 +51,10 @@ for(let k of keys){
   if(str.includes(k)) {
      // var type = 1;
 let regex = new RegExp(k,'g')
-          console.log(str.match(regex).length) 
+          // console.log(str.match(regex).length) 
       values.push(str.match(regex).length) 
 }
 }
-
   // console.log(keys)
   //  console.log(values)
   let object = {};
@@ -68,7 +67,6 @@ object[key] = value;
 }
 
 return object;
-
 
 }
 // (/* domains */)
