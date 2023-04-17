@@ -39,7 +39,6 @@ let addition = String(options.addition);
    if(!Object.keys(options).includes('additionRepeatTimes')) {
        additionRepeatTimes = 1;
    }
-
    //умножаем  additional на add...Times
 ////    
    let additionSeparator =  options.additionSeparator;
@@ -52,7 +51,6 @@ if( (!Object.keys(options).includes('additionSeparator')) && ((additionRepeatTim
    
 if(Object.keys(options).includes('addition') &&  (additionRepeatTimes === 1)) {
 
-    //!!неправильное условие
      multiAdd = addition.repeat(additionRepeatTimes) ;
 
    
@@ -61,11 +59,7 @@ if(Object.keys(options).includes('addition') &&  (additionRepeatTimes === 1)) {
         count--
  
        }
-   console.log()
     return newStr+multiAdd;
-   
-//  }  else if ((additionRepeatTimes > 1) &&  (Object.keys(options).includes('additionSeparator'))) {
-
 
 }  else if (((additionRepeatTimes > 1) &&  (Object.keys(options).includes('additionSeparator'))) || (!Object.keys(options).includes('additionSeparator')) && ((additionRepeatTimes > 1) && (Object.keys(options).includes('addition'))) ){
     // multiAdd = addition.repeat(additionRepeatTimes);
@@ -76,10 +70,8 @@ if(Object.keys(options).includes('addition') &&  (additionRepeatTimes === 1)) {
 
      console.log(addition)
     console.log(additionSeparator)
-    // console.log(addition)
    // multiAdd =   multiAdd + additionSeparator + addition
     
-   
       while (countSep > 1) {
           countSep--
           
@@ -95,7 +87,6 @@ if(Object.keys(options).includes('addition') &&  (additionRepeatTimes === 1)) {
         count--
 
        }
-   console.log()
     return newStr+multiAdd;
    
 }
@@ -105,8 +96,8 @@ else {
     while (count > 1)  {
            newStr += sep + str ;
            count--
-           console.log(count)
-           console.log(newStr)  
+          //  console.log(count)
+          //  console.log(newStr)  
        }
     return newStr;
  }
